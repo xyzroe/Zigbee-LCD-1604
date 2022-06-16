@@ -1,7 +1,7 @@
 
 # Zigbee LCD 1604
 
-Project to build informer using character LCD 16x4 with communication over Zigbee network.
+Project to build informer using Arduino with character LCD 16x4 and CC2530/CC2652 for communication over Zigbee network.
 
 ![Front view](/images/front_mini.jpeg)
 
@@ -39,10 +39,13 @@ Project to build informer using character LCD 16x4 with communication over Zigbe
   - to upload HEX file use [xLoader](https://github.com/binaryupdates/xLoader)
 2. Zigbee firmware
   - to build with your options/sensors use [PTVO firmware builder](https://ptvo.info)
-  - to flash hex file use CCDebuger with SmartRF Flash Programmer or visit [this page](https://www.zigbee2mqtt.io/guide/adapters/flashing/alternative_flashing_methods.html) to lookup alternative methods
+  - to flash hex file use CCDebuger with SmartRF Flash Programmer or visit [this page](https://www.zigbee2mqtt.io/guide/adapters/flashing/alternative_flashing_methods.html) to lookup for alternative methods
 
 #### Schematic
 ![Schematic](/images/Schematic.png)  
+
+#### PTVO settings
+![PTVO settings](/zigbee/ptvo.lcd.jpeg)  
 
 #### Enclose
 STL files can be found on [Thingiverse](https://www.thingiverse.com/thing:5412333)
