@@ -1,0 +1,17 @@
+Board type: CC2530
+Device type: Router
+Manufacturer name: xyzroe.cc
+Model ID: ptvo.lcd
+Status LED: P01, Sending reports
+Set default reporting interval (s): 60
+
+Output pins:
+P02: Output 1, UART (Baud rate: 9600, Packet end: None, Byte: 239)
+P13: Output 2, BMP280 (I2C SDA), External pull-up (Address (dec): 118)
+P14: Output 3, I2C SCL, External pull-up
+P13: Output 4, CCS811 (I2C SDA), External pull-up (Address (dec): 90)
+P13: Output 5, BH1750, External pull-up (Address (dec): 35, Resolution: 1 lux)
+P37: Output 8, Uptime (sec)
+
+Input pins:
+P20: Input 1, GPIO, Pull-up (Bind command: On/Off)
