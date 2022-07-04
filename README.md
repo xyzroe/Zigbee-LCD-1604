@@ -76,3 +76,8 @@ Box | Lid | Legs
 | e0          | tx            | lcd connect error               |
 | e1          | tx            | arg id err                      |
 | e2          | tx            | cmd format error                |
+
+
+### Like ♥️?
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/xyzroe)
+
