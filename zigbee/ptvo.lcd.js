@@ -1,12 +1,12 @@
 const zigbeeHerdsmanConverters = require('zigbee-herdsman-converters');
 
-const exposes = zigbeeHerdsmanConverters.exposes;
+const exposes = zigbeeHerdsmanConverters['exposes'] || require("zigbee-herdsman-converters/lib/exposes");
 const ea = exposes.access;
 const e = exposes.presets;
-const fz = zigbeeHerdsmanConverters.fromZigbeeConverters;
-const tz = zigbeeHerdsmanConverters.toZigbeeConverters;
+const fz = zigbeeHerdsmanConverters.fromZigbeeConverters || zigbeeHerdsmanConverters.fromZigbee;
+const tz = zigbeeHerdsmanConverters.toZigbeeConverters || zigbeeHerdsmanConverters.toZigbee;
 
-const ptvo_switch = zigbeeHerdsmanConverters.findByDevice({modelID: 'ptvo.switch'});
+const ptvo_switch = (zigbeeHerdsmanConverters.findByModel)?zigbeeHerdsmanConverters.findByModel('ptvo.switch'):zigbeeHerdsmanConverters.findByDevice({modelID: 'ptvo.switch'});
 fz.legacy = ptvo_switch.meta.tuyaThermostatPreset;
 fz.ptvo_on_off = {
   cluster: 'genOnOff',
@@ -372,7 +372,7 @@ const device = {
       exposes.binary('clear', ea.SET, value_on='ON', value_off='OFF').withDescription('Clear LCD'),
       exposes.numeric('alarm_mode', ea.STATE_SET).withValueMin(0).withValueMax(30000).withUnit('ms').withDescription('Alarm blink mode interval'),
       exposes.numeric('off_delay', ea.STATE_SET).withValueMin(0).withValueMax(300).withUnit('s').withDescription('Display light off delay after no move'),
-
+      //exposes.binary('movement', ea.STATE, value_on='true', value_off='false').withDescription('PIR movement detect'),
       e.occupancy().withDescription('PIR movement detect'),
       //e.cpu_temperature().withProperty('temperature').withEndpoint('l7'),
       exposes.binary('error', ea.STATE, value_on=true, value_off=false).withDescription('Error LCD'),
